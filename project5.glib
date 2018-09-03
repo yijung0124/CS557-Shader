@@ -1,0 +1,22 @@
+##OpenGL GLIB
+LookAt  0 0 3.  0 0 0  0 1 0
+Perspective 70
+Noise3D 128
+
+Vertex   project5.vert
+Fragment project5.frag
+Program  project5				\
+	uAng <-3.14159 0.785398 3.14159>		\
+	uBumpDensity <5. 16. 100.>			\
+	uBumpHeight <-.06 .005 .06>			\
+	uSurfaceColor {0.2 0.5 0.8 1.}		\
+	uLightX <-10.  0. 10.0>			\
+	uLightY <-10. 10. 10.0>			\
+	uLightZ <-10. 10. 10.0>			\
+	uAmbient <0. 0.1 .4>			
+	
+
+
+
+Color 1. 0. 0.5
+Obj Giraffe.obj

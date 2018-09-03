@@ -1,0 +1,26 @@
+##OpenGL GLIB
+
+Perspective 70
+Noise3D 128
+LookAt 0 0 3  0 0 0  0 1 0
+
+
+
+Vertex		project3.vert
+Fragment	project3.frag
+Program	project3					\
+		uK <0. 0.01 1.>				\
+		uP <0.01 0.2 2.>				\
+                uNoiseAmp <0. 0.0 10.>			\
+                uNoiseFreq <0. 0.15 2.>			\
+                uKa <0. 0.1 1.0>                        \
+                uKd <0. 0.6 1.0>                        \
+                uKs <0. 0.3 1.0>                        \
+                uShininess <1. 10. 1000.>               \
+                uLightX <-20. 5. 20.>                   \
+                uLightY <-20. 10. 20.>                  \
+                uLightZ <-20. 20. 20.>                  \
+                uColor {1. .7 0. 1.}                    \
+                uSpecularColor {1. 1. 1. 1.}
+
+QuadXY  -0.2  1.  200  200

@@ -1,0 +1,19 @@
+##OpenGL GLIB
+Perspective 70
+LookAt  0 0 10     0 0 0    0 1 0
+
+Vertex   project6.vert
+Geometry project6.geom
+Fragment project6.frag
+Program project6  				\
+	uModelCoords <true>		\
+	uLevel <3 3 8>			\
+	uQuantize <.3 15. 15.>		\
+	uColor { 1. 0.89 0.39 1. }
+
+
+#Obj giraffe.obj
+Obj cow.obj
+#Obj dino.obj
+#Obj bunny010n.obj
+

@@ -1,0 +1,15 @@
+##OpenGL GLIB
+
+Perspective 90
+LookAt 0 0 2  0 0 0  0 1 0
+
+
+Vertex   project1.vert
+Fragment project1.frag
+Program  project1				\
+	uAd <.001 .1 .5>		           \
+	uBd <.001 .1 .5>		           \
+	uTol <0. 0. 1.>
+
+Color 1 0.9 1
+Obj Giraffe.obj

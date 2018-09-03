@@ -1,0 +1,98 @@
+##OpenGL GLIB
+Perspective 70
+Lookat  0 0 3  0 0 0   0 1 0
+
+Vertex   texture.vert
+Fragment texture.frag
+Program  Texture  TexUnit 6
+
+Texture2D  6  posx.bmp
+QuadYZ 20. 20. 10 10
+Texture2D  6 negx.bmp
+QuadYZ -20. 20. 10 10
+Texture2D  6  posy.bmp
+QuadXZ 20. 20. 10 10
+Texture2D  6  negy.bmp
+QuadXZ -20. 20. 10 10
+Texture2D  6  posz.bmp
+QuadXY 20. 20. 10 10
+Texture2D  6  negz.bmp
+QuadXY -20. 20. 10 10
+
+
+
+CubeMap 6 posx.bmp negx.bmp  posy.bmp negy.bmp   posz.bmp negz.bmp
+
+Vertex   ripples.vert
+Fragment ripples.frag
+Program  Ripples					\
+	uLightX <-10.  0. 10.0>		\
+	uLightY <-10. 10. 10.0>		\
+	uLightZ <-10. 10. 10.0>		\
+	uColor {0.51 0.66 0.8 0.15}\
+	uTime <0. 0. 10.>			\
+	uPd <.2 1. 1.5>				\
+	uAmp0 <0. .05 .05>			\
+	uAmp1 <0. 0. .05>			\
+	uPhaseShift <0. 0. 6.28>
+
+
+Translate 0. -18.5 15.
+QuadXZ  10. 10.
+
+
+
+Vertex   noise.vert
+Fragment noise.frag
+Program  noise				\
+		uAd <.01 .3 1.>  uBd <.01 .25 1.>		\
+		uNoiseAmp <0. 0.3 1.>    uNoiseFreq <0. .85 5.>  \
+		uAlpha <0. 1. 1.>   \
+		uTol <0. .72 1.>		\
+		uOvalColor {0. 0. 0.}    \
+		uUseChromaDepth <false>        \
+		uChromaRed  <-5. -2.2 0.>      \
+		uChromaBlue <-5. -4. 2.>      
+
+
+Translate -10. 5. -30.
+Rotate -20 0. 1. 0.
+scale 2
+Color 1. 0.9. 1.
+Obj cow.obj
+
+
+Vertex	       part3.vert
+Fragment       part3.frag
+Program 	part3 \
+		Flat <false>				\
+		A <-2. 0. 2.>				\
+		B <-5. 0. 5.>				\
+		C <-5. 0. 5.>				\
+      		  NoiseAmp <0. 2.5 10.>			\
+      		  NoiseFreq <0. 1. 10.>			\
+        		Ka <0. 0.5 1.0>                        \
+       		 Kd <0. 0.6 1.0>                        \
+      		  Ks <0. 0.3 1.0>                        \
+      		  Shininess <1. 10. 50.>               \
+       		 LightX <-20. 5. 20.>                   \
+       		 LightY <-20. 10. 20.>                  \
+       		 LightZ <-20. 20. 20.>                  \
+      		  uColor {1. .5 0. 1.}                    \
+     		   SpecularColor {1. 1. 1. 1.}
+Translate 10. 5. 0.
+Scale 3
+Color 1. 1. 0.
+Rotate -195 0. 1. 0
+Obj giraffe.obj
+
+
+
+
+
+
+
+
+
+
+

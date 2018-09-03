@@ -1,0 +1,19 @@
+##OpenGL GLIB
+LookAt  0 0 3.  0 0 0  0 1 0
+Perspective 70
+Noise3D 128
+
+Vertex   project2.vert
+Fragment project2.frag
+Program  project2				\
+		uAd <.01 .05 .5>  uBd <.01 .05 .5>		\
+		uNoiseAmp <0. 0. 1.>    uNoiseFreq <0. 1. 10.>  \
+		uAlpha <0. 1. 1.>   \
+		uTol <0. 0. 1.>		\
+		uOvalColor {1.. 0. .5}    \
+		uUseChromaDepth <false>        \
+		uChromaRed  <-5. -2.2 0.>      \
+		uChromaBlue <-5. -4. 2.>      
+
+Color 1. 0.9. 1.
+Obj Giraffe.obj
